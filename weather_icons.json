@@ -1,0 +1,8 @@
+{
+  "sunny": "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg",
+  "night": "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-night.svg",
+  "cloudy":"https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/cloudy.svg",
+  "rainy": "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/rain.svg",
+  "windy": "https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg",
+  "thunder":"https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg"
+}

@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanalei&family=Saira+Condensed:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: 'Saira Condensed', sans-serif;
+    color: rgb(97, 97, 97);
+    margin: 0 15vw;
+}
+
+h1{
+    font-size: 3em;
+    color: white;
+}
+
+.box-layer{
+    margin: 10px 0;
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+    padding: 20px 0 0 20px;
+    background: linear-gradient(-180deg, black, white);
+}
+
+.box-layer img{
+    padding: 0;
+    width: 150px;
+    margin-left: 55px;
+    margin-top: -85px;
+    position: relative;
+    top: 25px;
+}
+
+.temp-stats{
+    color: white;
+    
+}
+
+.temp-stats p{
+    font-size: 2em;
+}
+
+.temp-region{
+    display: grid;
+    grid-template: "a b c d";
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+.text-warning{
+    text-align: end;
+}
+
+.s-left{
+    font-size: 3em;
+    padding-top: 10px;
+    text-align: end;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#user-input{
+    font-family: 'Saira Condensed', sans-serif;
+    padding: 10px 15px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    margin-right: 30px;
+    outline: none;
+}
+
+
+
+@media screen and (max-width:1350px) {
+    .temp-region{
+        grid-template: "a b c";
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .temp-region{
+        grid-template: "a b";
+    }
+    body{
+        margin: 0 5vw;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .temp-region{
+        grid-template: "a";
+    }
+    .title-layer{
+        text-align: center;
+    }
+    .s-left{
+        text-align: center;
+    }
+}
