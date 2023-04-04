@@ -67,15 +67,15 @@ h1{
 
 #user-input{
     font-family: 'Saira Condensed', sans-serif;
-    padding: 10px 15px;
-    border: 1px solid white;
-    background: transparent;
+    padding: 6px 5px;
+    border: none;
     color: white;
     margin-right: 30px;
     outline: none;
+    background: rgb(0, 0, 0);
+    border-bottom: 1px solid white;
+    font-size: 1.5em;
 }
-
-
 
 @media screen and (max-width:1350px) {
     .temp-region{
@@ -101,5 +101,12 @@ h1{
     }
     .s-left{
         text-align: center;
+    }
+    .nav-bar {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #user-input{
+        margin: 0;
     }
 }

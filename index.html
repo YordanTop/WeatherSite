@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Temp-checker</title>
-    <script type="module" src="firebase_app.js"></script>
 </head>
 <body>
     <main>
@@ -15,171 +14,53 @@
         <nav class="nav-bar">
             <header class="title-layer">
                 <h1>Temperature</h1>
-                <h2>Currently in your region</h2>
+                <h2 id="region">Currently in your region</h2>
             </header>
-            <aside class="user-input">
-                <input id="user-input" type="text" placeholder="Type a city/town or a country.">
-                <img src="img/icons8-search-60.png">
-            </aside>
+                <input id="user-input" type="text" placeholder="Type to Search...">
         </nav>
         
         <article class="temp-region">
         
             <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
+                <h2 class="temp-stats">Temperature</h2>
+                <aside class="temp-stats" id="current"></aside>
 
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg" alt="wheather">
+                <img id="current-img" src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg" alt="wheather">
                 <p>Today</p>
             </div>
 
             <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
+                <h2 class="temp-stats">Temperature</h2>
+                <aside class="temp-stats" id="wind"></aside>
 
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg" alt="wheather">
-                <p>Currently</p>
+                <img id="wind-img" src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg" alt="wheather">
+                <p>Wind</p>
             </div>
 
             <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
+                <h2 class="temp-stats">Temperature</h2>
+                <aside class="temp-stats" id="temp-rise"></aside>
 
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg" alt="wheather">
-                <p>Tomorrow</p>
+                <img id="temp-rise-img" src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thermometer-warmer.svg" alt="wheather">
+                <p>Maximum temperature</p>
             </div>
 
             <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
+                <h2 class="temp-stats">Temperature</h2>
+                <aside class="temp-stats" id="temp-low"></aside>
 
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg" alt="wheather">
-                <p>City/Town:</p>
+                <img id="temp-low-img" src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thermometer-colder.svg" alt="wheather">
+                <p>Minimum Temperature</p>
             </div>
         </article>  
 
            <h2 class="temp-stats s-left">In other popular places</h2>
-        
-        <article class="temp-region">
-        
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
 
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg" alt="wheather">
-                <p>Today</p>
-            </div>
-
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg" alt="wheather">
-                <p>Currently</p>
-            </div>
-
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg" alt="wheather">
-                <p>Tomorrow</p>
-            </div>
-
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg" alt="wheather">
-                <p>City/Town:</p>
-            </div>
+           <article class="temp-region" id="create-chunk">
+            
         </article>
-
-        <article class="temp-region">
-        
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/clear-day.svg" alt="wheather">
-                <p>Today</p>
-            </div>
-
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/wind.svg" alt="wheather">
-                <p>Currently</p>
-            </div>
-
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg" alt="wheather">
-                <p>Tomorrow</p>
-            </div>
-
-            <div class="box-layer">
-                <aside class="temp-stats">
-                    <h2>Temperature</h2>
-
-                    <p>30&deg;</p>
-                    
-                </aside>
-
-                <img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/thunderstorms.svg" alt="wheather">
-                <p>City/Town:</p>
-            </div>
-        </article>
-
 
     </main>
-    
+   <script src="wheather_searching.js"></script>    
 </body>
 </html>
