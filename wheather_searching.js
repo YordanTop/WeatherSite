@@ -1,6 +1,6 @@
 let userInput = document.getElementById("user-input");
 let region = document.getElementById("region");
-let API_KEY = 'API_KEY';
+let API_KEY = '6bf2f994f2b571c6a7b6b821490550fe';
 let count = 0
 let popularePlaces = ["Usa","Germany","France","Hong Kong"
                       ,"Paris","Turkey","Iraq","Sofia"]

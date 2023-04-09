@@ -109,4 +109,7 @@ h1{
     #user-input{
         margin: 0;
     }
+    #user-input::placeholder{
+        text-align: center;
+    }
 }
